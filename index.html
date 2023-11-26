@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAPA Anthony</title>
+  <!-- Enlace a la librería Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" integrity="sha512-puR/Z+1eOam8wLr8KsIsUVuuZl2p8a4jZ90rO02Njx4+QskF91XGjVqZ3oK9kRJOZF0F6HvSarS6c55DEK1gBA==" crossorigin=""/>
+  <style>
+    /* Estilo mínimo para el contenedor del mapa */
+    #map {
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor del mapa -->
+  <div id="map"></div>
+
+  <!-- Script para cargar Leaflet y mostrar el mapa -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" integrity="sha512-c3+Q2ecK/1Djb3yNLrCAqP56dR5dUTfPEUf6cnj3o1aoyt9Iu9B6zu5CMqdv2jj3P9kZ5BjPUnrz57ecJFfA9Sw==" crossorigin=""></script>
+  <script>
+    // Configuración básica del mapa
+    var map = L.map('map').setView([0, 0], 2); // Centrado en el ecuador como ejemplo
+
+    // Capa de mosaicos MBTiles
+    L.tileLayer('path/to/PruebaProyecto3_5e389a.mbtiles/{z}/{x}/{y}.png', {
+      attribution: 'MAPA Anthony'
+    }).addTo(map);
+  </script>
+
+  <!-- Enlace directo al mapa -->
+  <p>Accede al mapa directamente: <a href="path/to/PruebaProyecto3_5e389a.mbtiles/{z}/{x}/{y}.png" target="_blank">Ver Mapa</a></p>
+
+</body>
+</html>
